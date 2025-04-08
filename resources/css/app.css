@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --rounded-box: 1.3rem; /* Border radius for large elements (e.g., cards) */
+        --rounded-btn: 0.8rem; /* Border radius for medium elements (e.g., buttons) */
+        --rounded-tooltip: 2.2rem; /* Border radius for small elements (e.g., tooltips) */
+    }
+  }
+
+.btn {
+@apply border shadow-none border-gray-900/5 dark:border-white/5;
+}
+
+.btn-secondary {
+    @apply border border-gray-900/5 dark:border-white/5;
+}
+
+.card {
+    @apply border shadow-none border-gray-900/10 dark:border-white/5;
+}
+
+.dropdown-menu {
+    @apply border border-gray-900/5 dark:border-white/5;
+}
+
+.badge {
+    @apply h-8 border border-gray-900/5 dark:border-white/5;
+}
+
+.modal-content {
+    @apply border border-gray-900/5 dark:border-white/5 rounded-box;
+}
+
+/* Disabilita le transizioni per lo switch del tema */
+.no-transition,
+.no-transition::before,
+.no-transition::after,
+.no-transition *,
+.no-transition *::before,
+.no-transition *::after {
+    transition: none !important;
+    animation: none !important;
+}
