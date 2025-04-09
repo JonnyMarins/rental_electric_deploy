@@ -26,16 +26,7 @@ FROM richarvey/nginx-php-fpm:latest
 COPY --from=build /app/public/build /var/www/html/public/build
 
 # Copia i file dell'applicazione Laravel
-COPY app/ /var/www/html/app/
-COPY bootstrap/ /var/www/html/bootstrap/
-COPY config/ /var/www/html/config/
-COPY database/ /var/www/html/database/
-COPY public/ /var/www/html/public/
-COPY resources/views/ /var/www/html/resources/views/
-COPY routes/ /var/www/html/routes/
-COPY storage/ /var/www/html/storage/
-COPY artisan /var/www/html/
-COPY composer.* /var/www/html/
+COPY . .
 
 # Image config
 ENV SKIP_COMPOSER 1
